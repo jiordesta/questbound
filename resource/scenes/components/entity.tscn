@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c02ra0eaw15yk"]
+
+[ext_resource type="Texture2D" uid="uid://bw3o5lkila2am" path="res://test/sample_entity.png" id="1_3djyd"]
+
+[node name="Entity" type="RigidBody2D"]
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+freeze_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_3djyd")

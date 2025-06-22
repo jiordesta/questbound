@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd0cl3oxnqbdy"]
+
+[ext_resource type="Script" path="res://test/test.gd" id="1_y1fhd"]
+[ext_resource type="Texture2D" uid="uid://bw3o5lkila2am" path="res://test/sample_entity.png" id="2_xr1tk"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_y1fhd")
+
+[node name="Entities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="SampleEntity" type="Sprite2D" parent="Entities"]
+position = Vector2(-9, -2)
+texture = ExtResource("2_xr1tk")

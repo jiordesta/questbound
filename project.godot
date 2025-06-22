@@ -13,3 +13,15 @@ config_version=5
 config/name="QuestBound"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Constant="*res://resource/scripts/common/constant.gd"
+Data="*res://resource/scripts/common/data.gd"
+Enum="*res://resource/scripts/common/enum.gd"
+Helper="*res://resource/scripts/common/helper.gd"
+Global="*res://resource/scripts/common/global.gd"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
