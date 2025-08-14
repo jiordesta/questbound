@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjii5o0uyusr6"]
+
+[ext_resource type="Texture2D" uid="uid://b15ikaf8our2s" path="res://resource/textures/logo.png" id="1_oxhb5"]
+[ext_resource type="FontFile" uid="uid://b1bdu2evsjbhn" path="res://resource/fonts/four-pixels-font/FourPixelsFont.ttf" id="2_6wgfp"]
+
+[sub_resource type="Animation" id="Animation_nfe3s"]
+resource_name = "show"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7myiu"]
+_data = {
+"show": SubResource("Animation_nfe3s")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8kcw"]
+font = ExtResource("2_6wgfp")
+font_size = 64
+
+[node name="Loader" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.319
+anchor_bottom = 0.543
+offset_left = 440.0
+offset_top = 104.0
+offset_right = 328.512
+offset_bottom = 8.13599
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oxhb5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7myiu")
+}
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 384.0
+offset_right = 912.0
+offset_bottom = 456.0
+text = "QUESTBOUND"
+label_settings = SubResource("LabelSettings_k8kcw")
+horizontal_alignment = 1

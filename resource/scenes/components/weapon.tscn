@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://tcq8e1gtdpr0"]
+
+[ext_resource type="Script" path="res://resource/scripts/classes/weapon.gd" id="1_bhj2a"]
+[ext_resource type="Texture2D" uid="uid://caf8133la6h3t" path="res://test/weapon_sample.png" id="2_d18rk"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_bhj2a")
+
+[node name="Texture" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Texture"]
+texture = ExtResource("2_d18rk")
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

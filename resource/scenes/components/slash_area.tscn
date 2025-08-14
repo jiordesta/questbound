@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmop0cjgmxwm6"]
+
+[ext_resource type="Texture2D" uid="uid://bsulckxfkbefl" path="res://test/ray.png" id="1_1ccse"]
+
+[node name="SlashArea" type="Area2D"]
+show_behind_parent = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, -3, 1, -2, 1, 2, 2, 3, 8, 2, 14, 1, 15, 0, 14, -1, 8, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(6, 0)
+rotation = 0.785398
+texture = ExtResource("1_1ccse")

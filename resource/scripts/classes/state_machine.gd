@@ -28,6 +28,10 @@ func _physics_process(delta):
 func stateTransitioned(state, state_name):
 	var new_state: State = states.get(state_name.to_lower())
 	if !new_state: return
+	states['current'].Exit()
 	states['current'] = new_state.Enter()
-func overRideLogicState(state_name, item = null, entity = null):
-	pass
+func overRideState(state_name, item = null, entity = null):
+	var new_state: State = states.get(state_name.to_lower())
+	if !new_state: return
+	states['current'].Exit()
+	states['current'] = new_state.Enter()

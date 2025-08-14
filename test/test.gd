@@ -10,3 +10,4 @@ func spawnEntity(script):
 
 func _ready() -> void:
 	spawnEntity(PlayerController)
+	Global.entity_node = $Entities
